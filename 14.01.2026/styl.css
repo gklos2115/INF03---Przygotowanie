@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+    font-family: Georgia;
+}
+nav, footer{
+    background-color: tomato;
+    color: mistyrose;
+    padding: 10px;
+}
+nav {
+    width: 20%;
+}
+.pierwsza, .druga, .trzecia {
+    background-color: #FFAEA5;
+    height: 170px;
+    font-size: 200%;
+    display: none;
+}
+.pierwsza {
+    background-color: mistyrose;
+}
+main {
+    background-color: mistyrose;
+    height: 80%;
+    width: 510px;
+}
+table{
+    padding: auto;
+    width: 60%;
+}
+option, button{
+    padding: 20px;
+}
+dt{
+    font-style: italic;
+}
+dt:hover{
+    font-size: 180%;
+}
+

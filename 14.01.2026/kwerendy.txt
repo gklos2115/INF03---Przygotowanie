@@ -1,0 +1,4 @@
+Zapytanie 1: select smok.nazwa, smok.dlugosc, smok.szerokosc from smok where smok.pochodzenie = 'Polska'
+Zapytanie 2: select DISTINCT smok.pochodzenie from smok order by smok.pochodzenie asc
+Zapytanie 3: select parada.rok, AVG(smok.dlugosc) as 'Średnia długość' from parada join udzial on udzial.id_parada = parada.id join smok on smok.id = udzial.id_smok where parada.rok > 2005 GROUP BY parada.rok
+Zapytanie 4: alter TABLE parada add column lokalizacja varchar(100)
