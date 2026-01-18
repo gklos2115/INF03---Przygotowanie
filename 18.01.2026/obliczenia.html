@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+        <h1>Całodobowa stacja paliw</h1>
+    </header>
+    <nav>
+        <a href="stacja.html"><img src="home.png" alt=""></a>
+        <a href="obliczenia.html"><img src="znak.png" alt=""></a>
+        <a href="kwerendy.txt">Pobierz dokumenty</a>
+    </nav>
+    <main>
+        <section class="left">
+            <h2>Orientacyjny koszt paliwa</h2>
+            <label for="">Rodzaj paliwa (1-benzyna, 2-olej napędowy):</label><br>
+            <input type="number" name="" id="rodzaj"><br>
+            <label for="">Ile litrów?</label><br>
+            <input type="number" name="" id="ile_litrow"><br>
+            <button onclick="skrypt()">Oblicz</button>
+            <p id="wynik"></p>
+        </section>
+        <section class="right">
+            <img src="samochod.png" alt="samochód">
+        </section>
+    </main>
+    <footer>
+        <p>Stronę wykonał</p>
+    </footer>
+    <script>
+        function skrypt(){
+            let rodzaj = parseInt(document.getElementById("rodzaj").value);
+            let litry = parseInt(document.getElementById("ile_litrow").value);
+            if(rodzaj === 1){
+                let wynik = 4 * litry;
+                document.getElementById("wynik").innerHTML = wynik;
+            }
+            if(rodzaj === 2){
+                let wynik = 3.5 * litry;
+                document.getElementById("wynik").innerHTML = wynik;
+            }
+            else{
+                document.getElementById("wynik").innerHTML = "0 zł";
+            }
+        }
+    </script>
+</body>
+</html>

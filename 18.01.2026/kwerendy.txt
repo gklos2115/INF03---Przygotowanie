@@ -1,0 +1,5 @@
+Zapytanie 1: select samochody.marka, samochody.rocznik from samochody where samochody.kolor = 'niebieski'
+Zapytanie 2: select count(*) from samochody where samochody.marka in ('Toyota', 'Opel') and samochody.stan = 'bardzo dobry'
+Zapytanie 3: UPDATE samochody set samochody.stan = 'dobry' where samochody.rocznik < '2004'
+Zapytanie 4: create user 'jan' @'localhost' identified by 'janKowalski1@'
+Zapytanie 5: GRANT SELECT, INSERT, UPDATE ON samochody.samochody TO 'jan'@'localhost'; ALTER USER 'jan'@'localhost' ;
