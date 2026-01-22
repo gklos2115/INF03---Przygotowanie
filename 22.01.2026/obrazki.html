@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <main>
+        <section class="one">
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pierwszy_i">
+            <label for=""><input type="radio" name="one" id="pierwszy1" onmouseover="zmien('blur(4px)')">Blur</label><br>
+            <label for=""><input type="radio" name="one" id="pierwszy2" onmouseover="zmien('sepia(100%)')">Sepia</label><br>
+            <label for=""><input type="radio" name="one" id="pierwszy3" onmouseover="zmien('negatyw(100%)')">Negatyw</label><br>
+            <button onclick="Pierwszy()" id="pierwszy">Zastosuj</button>
+        </section>
+        <section class="two">
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="drugi_i"><br>
+            <button onclick="Drugi('none')">Kolorowy</button>
+            <button onclick="Drugi('grayscale(100%)')">Czarnobiały</button>
+        </section>
+        <section class="three">
+            <img src="owoce.jpg" alt="Kosz pełen owoców" id="trzeci_i"><br>
+            <input type="range" name="" id="trzeci_s" min="0" max="100" value="100"><br>
+            <button onclick="Trzeci()">Zastosuj</button>
+        </section>
+        <section class="four">
+            <img src="zolw.jpg" alt="Żółw w wodzie" id="czwarty_i">
+            <br>
+            <input type="range" name="" id="czwarty_s" min="0" max="250"><br>
+            <button onclick="Czwarty()"></button>
+        </section>
+    </main>
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+    </footer>
+    <script>
+       function Pierwszy(){
+            let efekt;
+            if(document.getElementById("pierwszy1").checked){
+                efekt = 'blur(4px)';
+            } else if(document.getElementById("pierwszy2").checked){
+                efekt = 'sepia(100%)';
+            } else if(document.getElementById("pierwszy3").checked){
+                efekt = 'invert(100%)';
+            }
+            document.getElementById("pierwszy_i").style.filter = efekt;
+        }
+        function Drugi(wartosc){
+            document.getElementById("drugi_i").style.filter = wartosc;
+        }
+        function Trzeci(){
+            let suwak = document.getElementById("trzeci_s").value;
+            documet.getElementById("trzeci_id").style.filter = brightness(suwak);
+        }
+        function Czwarty(){
+            let suwak = document.get
+        }
+    </script>
+</body>
+</html>

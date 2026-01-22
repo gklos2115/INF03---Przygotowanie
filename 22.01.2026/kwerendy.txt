@@ -1,0 +1,4 @@
+Zapytanie 1: select pracownicy.imie, pracownicy.pensja from pracownicy where pracownicy.staz < 5
+Zapytanie 2: select AVG(pracownicy.pensja), stanowiska.nazwa from pracownicy join stanowiska on stanowiska.id = pracownicy.stanowiska_id group by stanowiska.nazwa
+Zapytanie 3: select pracownicy.imie, pracownicy.nazwisko, pracownicy.pensja from pracownicy where pracownicy.pensja = (select MAX(pracownicy.pensja) from pracownicy)
+Zapytanie 4: UPDATE pracownicy set pracownicy.staz = pracownicy.staz + 1
