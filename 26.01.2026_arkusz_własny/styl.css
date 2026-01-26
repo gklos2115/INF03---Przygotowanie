@@ -1,0 +1,45 @@
+* {
+    font-family: 'Bookman Old Style', serif;
+}
+header{
+    background-color: darkcyan;
+    color:white;
+    width: 50%;
+    height: 100%;
+    letter-spacing: 15px;
+}
+section{
+    background-color: azure;
+    width: 30%;
+    padding: 1%;
+    box-shadow: 4px, 8px, dimgray;
+}
+main{
+    display: flex;
+}
+.img-s{
+    width: 100%;
+}
+p, h2, h3{
+    padding: 15px;
+}
+a{
+    color: white;
+}
+h5{
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+h5:hover{
+    background-color: lightgreen;
+}
+.cytaty{
+    text-align: center;
+    padding: 10px 0;
+    font-style: italic;
+}
+#joanna, #ewa{
+    display: none;
+}

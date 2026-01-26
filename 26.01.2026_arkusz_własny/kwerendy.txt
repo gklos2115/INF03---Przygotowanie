@@ -1,0 +1,4 @@
+Zapytanie 1: select COUNT(*) from pracownicy GROUP BY pracownicy.pensja order by pracownicy.pensja desc
+Zapytanie 2: select pracownicy.imie, pracownicy.nazwisko, stanowiska.nazwa from pracownicy JOIN stanowiska on pracownicy.stanowiska_id = stanowiska.id WHERE pracownicy.staz > 10
+Zapytanie 3: select pracownicy.imie, pracownicy.nazwisko, pracownicy.pensja from pracownicy where pracownicy.staz BETWEEN 10 and 20
+Zapytanie 4: ALTER TABLE stanowiska add column minPensja int

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasz zespół</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo firmy">
+    </header>
+    <header>
+        <h1>Nasz zespół</h1>
+    </header>
+    <main>
+        <section class="left" onclick="pierwsza()">
+            <img src="osoba1.jpg" alt="Dyrektor" class="img-s">
+            <h2>Krzysztof Dobromilski</h2>
+            <h3>Dyrektor</h3>
+            <p>Firma logistyczna była jego marzeniem. Zrealizował je 10 lat temu. Nasza firma prosperuje dzięki Krzysztofowi</p>
+            <p>telefon: 111222333</p>
+            <a href="mailto:Krzysztof.Dobromilski@firma.pl">Kontakt</a>
+        </section>
+        <section class="center" onclick="druga()">
+            <img src="osoba2.jpg" alt="Kierownik logistyków" class="img-s">
+            <h2>Joanna Trojanowska</h2>
+            <h3>Kierownik logistyków</h3>
+            <p>Od początku firmy z nami. Wie jak zorganizować pracę swoich logistyków aby wszystko było na czas</p>
+            <p>telefon: 222333444</p>
+            <a href="mailto:Joanna.Trojanowska@firma.pl">Kontakt</a>
+        </section>
+        <section class="right" onclick="trzecia()">
+            <img src="osoba3.jpg" alt="Kadry" class="img-s">
+            <h2>Ewa Nowak</h2>
+            <h3>Księgowość i kadry</h3>
+            <p>Od lat finanse powierzamy niezawodnej Ewie. Twardą ręką trzyma kasę i dba o wszystkich pracowników</p>
+            <p>telefon: 333444555</p>
+            <a href="mailto:Ewa.Nowak@firma.pl">Kontakt</a>
+        </section><br>
+        <div class="cytaty">
+            <p id="krzysztof">Każdego dnia stawiam sobie nieosiągalne wyzwania i próbuję je wykonać</p>
+            <p id="joanna">Nie bój się porażek, im więcej ich rozwiążesz, tym szybciej osiągniesz cel</p>
+            <p id="ewa">Niezadowolony pracownik jest dla mnie źródłem nauki</p>
+        </div>
+    </main>
+    <footer>
+        <p>Stronę wykonał: 00000000000</p>
+    </footer>
+    <script>
+        function pierwsza(){
+            document.getElementById('krzysztof').style.display = 'none';
+            document.getElementById('joanna').style.display = 'block';
+        }
+        function druga(){
+            document.getElementById('joanna').style.display = 'none';
+            document.getElementById('ewa').style.display = 'block';
+        }
+        function trzecia(){
+            document.getElementById('ewa').style.display = 'none';
+            document.getElementById('krzysztof').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
