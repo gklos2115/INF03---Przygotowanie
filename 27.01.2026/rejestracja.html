@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section class="boczny">
+        <img src="obraz.png" alt="Promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>20%</td>
+            </tr>
+        </table>
+    </section>
+    <header>
+        <h1>Zarejestruj się w sklepie</h1>
+    </header>
+    <main>
+        <button onclick="Zatwierdzajaca('jeden')" id="one">Klient</button>
+        <button onclick="Zatwierdzajaca('dwa')" id="two">Adres</button>
+        <button onclick="Zatwierdzajaca('trzy')" id="three">Kontakt</button>
+        <div id="pierwszy">
+            <p>Imię</p><br>
+            <input type="text" name="" id="imie" placeholder="Wpisz dane..."><br>
+            <p>Nazwisko</p><br>
+            <input type="text" name="" id="nazwisko"><br>
+            <p>Data urodzenia</p><br>
+            <input type="date" name="" id="data"><br>
+        </div>
+        <div id="drugi">
+            <p>Ulica</p><br>
+            <input type="text" name="" id="ulica"><br>
+            <p>Numer</p><br>
+            <input type="number" name="" id="numer"><br>
+            <p>Miasto</p><br>
+            <input type="text" name="" id="miasto">
+        </div>
+        <div id="trzeci">
+            <p>Numer komórkowy</p><br>
+            <input type="tel" name="" id="telefon"><br>
+            <label for=""><input type="checkbox" name="" id="zgoda">Akceptuję RODO</label><br>
+            <button onclick="">Zatwierdź dane</button>
+        </div>
+        <section class="pasek"></section>
+    </main>
+    <footer>
+        <h4>Rejestrację do sklepu wykonał: 000000000</h4>
+    </footer>
+    <script>
+        function Zatwierdzajaca(paramentr){
+            if(paramentr == 'jeden'){
+                document.getElementById('drugi').style.display = 'none';
+                document.getElementById('trzeci').style.display = 'none';
+                document.getElementById('pierwszy').style.display = 'block';
+            }
+            else if(paramentr == 'dwa'){
+                document.getElementById('pierwszy').style.display = 'none';
+                document.getElementById('trzeci').style.display = 'none';
+                document.getElementById('drugi').style.display = 'block';
+            }
+            else if(paramentr == 'trzy'){
+                document.getElementById('drugi').style.display = 'none';
+                document.getElementById('pierwszy').style.display = 'none';
+                document.getElementById('trzeci').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
