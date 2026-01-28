@@ -1,0 +1,6 @@
+Zapytanie 1: insert into logowanie (logowanie.nick, logowanie.haslo) SELECT 'Jeremi', 'Jer123';
+insert into uczestnicy (uczestnicy.logowanie_id, uczestnicy.imie, uczestnicy.nazwisko) VALUES ((SELECT logowanie.id from logowanie where logowanie.nick = 'Jeremi' AND logowanie.haslo = 'Jer123'), 'Jeremi', 'Kowalski');
+Zapytanie 2: select FLOOR(AVG(uczestnicy.rokUr)) as 'Średni rok urodzenia' from uczestnicy
+Zapytanie 3: select uczestnicy.imie, uczestnicy.nazwisko, logowanie.nick, logowanie.haslo from logowanie join uczestnicy on uczestnicy.logowanie_id = logowanie.id where LEFT(uczestnicy.imie, 1) = 'J'
+Zapytanie 4: create user 'uczestnik'@'localhost' IDENTIFIED BY 'Ucz123&'
+Zapytanie 5: GRANT SELECT, UPDATE on chat.uczestnicy to 'uczestnik'@'localhost'

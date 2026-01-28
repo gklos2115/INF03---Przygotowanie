@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Chat</h2>
+    </header>
+        <section clas="boczny">
+            <h3>Chaty</h3>
+            <ul>
+                <li>Ogólny</li>
+                <li>Tematyczne</li>
+                <ol>
+                    <li>Turystyczny</li>
+                    <li>Żeglarski</li>
+                    <li>Żeglarski</li>
+                    <li>Hodowla zwierzątek domowych</li>
+                </ol>
+            </ul>
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>Krzysztof Łukasiński</p>
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+        </section>
+    <main>
+        <section class="chat" id="chat">
+            <div class="Jolka">
+                <img src="Jolka.jpg" alt=""><p>Cześć idziesz jutro do kina?</p>
+            </div>
+            <div class="Krzysiek">
+                <img src="Krzysiek.jpg" alt=""><p>Tak! A ty?</p>
+            </div>
+        </section>
+        Wpisz wiadomość: <input type="text" id="wiadomosc"> <button onclick="Pierwszy()">Wyślij</button>
+        <button onclick="Losowanie()">Generuj losową odpowiedź</button>
+    </main>
+    <footer>
+        <h5>Stronę wykonał: 000000000</h5>
+    </footer>
+    <script>
+        function Pierwszy(){
+            let tekst = document.getElementById('wiadomosc').value;
+            document.querySelector('#chat').innerHTML = `<div class="Jolka">
+                    <img src="Jolka.jpg" alt=""><p>${tekst}</p>
+                </div>`;
+        }
+        function Druga(){
+            let tablica = ["Świetnie!",
+"Kto gra główną rolę?",
+"Lubisz filmy Tego reżysera?",
+"Będę 10 minut wcześniej",
+"Może kupimy sobie popcorn?",
+"Ja wolę Colę",
+"Zaproszę jeszcze Grześka",
+"Tydzień temu też byłem w kinie na Diunie",
+"Ja funduję bilety"];
+            let losowy = tablica[Math.floor(Math.random() * tablica.length)];
+            const input = document.querySelector('#wiadomosc');
+        }
+    </script>
+</body>
+</html>
