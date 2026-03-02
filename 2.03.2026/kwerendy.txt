@@ -1,0 +1,8 @@
+Zapytanie 1: CREATE TABLE uzytkownicy (
+    id int AUTO_INCREMENT PRIMARY KEY,
+    login varchar(50),
+    haslo varchar(50)
+);
+Zapytanie 2: INSERT INTO uzytkownicy (uzytkownicy.login, uzytkownicy.haslo) SELECT 'Grzegorz', 'g'
+Zapytanie 3: SELECT uzytkownicy.login from uzytkownicy
+Zapytanie 4: SELECT uzytkownicy.id, uzytkownicy.login from uzytkownicy where LEFT(uzytkownicy.haslo, 1) = 4

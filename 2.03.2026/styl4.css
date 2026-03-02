@@ -1,0 +1,51 @@
+/*  Są zawarte wyłącznie w zewnętrznym arkuszu stylów
+‒ Domyślne dla całej strony: krój czcionki Garamond
+‒ Dla banera: kolor tła SaddleBrown, biały kolor czcionki, wyrównanie tekstu do środka, wysokość 50 px
+‒ Dla bloku lewego: kolor tła Tan, wysokość 500 px, szerokość 40%
+‒ Dla obu bloków prawych: kolor tła Tan, wysokość 250 px, szerokość 60%
+‒ Dla bloku stopki: kolor tła SaddleBrown, biały kolor czcionki
+‒ Dla formularza: kolor tła SaddleBrown, biały kolor czcionki, marginesy wewnętrzne 10 px (góra i dół)
+i 30 px (lewy i prawy), szerokość 300 px
+‒ Dla zastosowanych w formularzu pól: marginesy zewnętrzne 5 px
+‒ Dla paragrafu (akapitu): przed każdym paragrafem wstawiany jest tekst o treści „STATUS: ”*/
+*{
+    font-family: Garamond;
+}
+header{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+.left{
+    background-color: tan;
+    height: 500px;
+    width: 40%;
+}
+.right_one, .right_two{
+    background-color: tan;
+    height: 250px;
+    width: 60%;
+    display: block;
+}
+main{
+    display: flex;
+    background-color: tan;
+}
+footer{
+    background-color: saddlebrown;
+    color: white;
+}
+form{
+    background-color: saddlebrown;
+    color: white;
+    padding: 10px 30px;
+    width: 300px;
+    display: block;
+}
+input, button{
+    margin: 5px;
+}
+p::before{
+    content: "STATUS: ";
+}

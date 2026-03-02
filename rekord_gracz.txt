@@ -1,0 +1,1 @@
+'NewPlayer', 'newplayer@casino.pl', 100.00, '2025-06-20', 'newplayer.jpg'

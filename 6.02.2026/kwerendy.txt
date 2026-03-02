@@ -1,0 +1,14 @@
+Zapytanie 1: select produkt.nazwa, produkt.kategoria, produkt.cena from produkt where produkt.kategoria = 'gitara' order by produkt.cena desc;
+Zapytanie 2: select DISTINCT produkt.kategoria from produkt order by produkt.kategoria asc
+Zapytanie 3: select produkt.kategoria, AVG(produkt.cena) as 'Srednia_cena', COUNT(*) as 'Liczba_produktow' from produkt GROUP BY produkt.kategoria HAVING COUNT(*) > 2
+Zapytanie 4: UPDATE produkt set produkt.stan_magazynowy = produkt.stan_magazynowy + 10 WHERE produkt.producent = 'Yamaha'
+Zapytanie 5: SELECT produkt.nazwa, produkt.cena from produkt where produkt.cena > (select AVG(produkt.cena) from produkt)
+Zapytanie 6: WITH DrogieProdukty as (
+    SELECT * FROM produkt where produkt.cena > 1000
+)
+SELECT nazwa, kategoria, cena from DrogieProdukty order by cena desc
+Zapytanie 7: CREATE VIEW widok_zamowienia as SELECT klient.imie, klient.nazwisko, produkt.nazwa, COUNT(zamowienie.id), zamowienie.data_zamowienia, zamowienie.status from zamowienie join produkt on produkt.id = zamowienie.id_produkt join klient on klient.id = zamowienie.id_klient GROUP BY klient.imie, klient.nazwisko, produkt.nazwa, zamowienie.data_zamowienia, zamowienie.status
+Zapytanie 8: DROP USER IF EXISTS 'sprzedawca'@'localhost';
+CREATE USER 'sprzedawca'@'localhost' IDENTIFIED by 'Sprzed@wca123';
+GRANT SELECT, INSERT on sklep.* TO 'sprzedawca'@'localhost';
+REVOKE INSERT ON sklep.* FROM 'sprzedawca'@'localhost';

@@ -1,0 +1,4 @@
+Zapytanie 1: select MIN(notatki.priorytet) from notatki where notatki.id = 3
+Zapytanie 2: select notatki.nazwa, notatki.priorytet from notatki where notatki.nazwa like '%na%'
+Zapytanie 3: select osoby.imie, notatki.nazwa from notatki join osoby on osoby.id = notatki.Osoby_id where notatki.priorytet = 5
+Zapytanie 4: select osoby.imie, count(notatki.id) from osoby join notatki on notatki.Osoby_id = osoby.id GROUP BY osoby.imie

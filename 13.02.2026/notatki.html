@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Moje zadania</h2>
+    </header>
+    <nav>
+        <input type="text" name="" id="zadanie" placeholder="Dodaj zadanie..."><br>
+        <button onclick="Dodawanie()">Dodaj</button>
+    </nav>
+    <section>
+        <img src="obraz.jpg" alt="notatki">
+    </section>
+    <main class="main">
+        <ul class="lista">
+            <li id="1">Wyprowadzić psa <button onclick="Usuwanie('1')">Wykonane</button></li>
+            <li id="2">Gimnastyka <button onclick="Usuwanie('2')">Wykonane</button></li>
+            <li id="3">Zakupy <button onclick="Usuwanie('3')">Wykonane</button></li>
+            <li id="4">Spacer z kumplem <button onclick="Usuwanie('4')">Wykonane</button></li>
+            <li id="5">Odrabianie lekcji z młodszą siostrą <button onclick="Usuwanie('5')">Wykonane</button></li>
+            <li id="6">Projekt na geografię <button onclick="Usuwanie('6')">Wykonane</button></li>
+        </ul>
+    </main>
+    <footer>
+        <h3>Notatki: 000000000</h3>
+    </footer>
+    <script>
+        let max_parametr = 6;
+        function Usuwanie(parametr){
+            let id = document.getElementById(parametr);
+            id.style.textDecoration = "line-through";
+        }
+        function Dodawanie(){
+            let zadanie = document.getElementById('zadanie').value;
+            const element = document.createElement("li");
+            element.innerText = zadanie;
+            let id = max_parametr + 1;
+            element.id = id;
+            element.className = "lista";
+            document.body.appendChild(element);
+        }
+    </script>
+</body>
+</html>
